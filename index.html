@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Nuestra Historia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#E6B8C0',
+            background: '#F7F5F4',
+            dark: '#2B2B2B'
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Animaciones -->
+  <style>
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease-out;
+    }
+    .fade-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body class="bg-background text-dark">
+
+  <!-- NAVBAR -->
+  <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur border-b border-gray-200">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <span class="text-lg font-medium">Nuestra Historia</span>
+      <div class="space-x-6 text-sm text-gray-600">
+        <a href="#inicio">Inicio</a>
+        <a href="#historia">Historia</a>
+        <a href="#video">Video</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="inicio" class="relative h-screen flex items-center justify-center">
+    <img src="tu-foto.jpg" class="absolute inset-0 w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-black/40"></div>
+
+    <div class="relative z-10 text-center px-6 text-white max-w-3xl fade-up">
+      <h1 class="text-4xl md:text-6xl font-light mb-6">
+        Nuestra última Navidad<br />como novios
+      </h1>
+      <p class="text-lg text-white/90">
+        Antes de promesas eternas, hubo miradas, valentía y un “sí” que lo cambió todo.
+      </p>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section id="historia" class="max-w-6xl mx-auto px-6 py-32">
+    <h2 class="text-3xl font-light mb-24 text-center fade-up">
+      Nuestra línea del tiempo
+    </h2>
+
+    <div class="relative border-l border-gray-300 ml-4 space-y-32">
+
+      <!-- EVENTO 1 -->
+      <div class="relative pl-12 grid md:grid-cols-2 gap-10 items-center fade-up">
+        <span class="absolute -left-2 top-8 w-4 h-4 bg-primary rounded-full"></span>
+
+        <img src="foto-conoci.jpg" class="w-full h-72 object-cover rounded-xl shadow-md" />
+
+        <div>
+          <h3 class="text-2xl font-light mb-4">Cuando la conocí</h3>
+          <p class="text-gray-600 leading-relaxed">
+            Te conocí sin saber que ese instante se quedaría conmigo para siempre.
+            No fue inmediato, fue profundo.  
+            Algo en ti me hizo sentir que estaba exactamente donde debía estar.
+          </p>
+        </div>
+      </div>
+
+      <!-- EVENTO 2 -->
+      <div class="relative pl-12 grid md:grid-cols-2 gap-10 items-center fade-up">
+        <span class="absolute -left-2 top-8 w-4 h-4 bg-primary rounded-full"></span>
+
+        <img src="foto-declaracion.jpg"
+             class="w-full h-72 object-cover rounded-xl shadow-md md:order-2" />
+
+        <div class="md:order-1">
+          <h3 class="text-2xl font-light mb-4">Cuando me le declaré</h3>
+          <p class="text-gray-600 leading-relaxed">
+            Decirte lo que sentía fue un acto de amor y de fe.
+            No prometí perfección, prometí verdad.
+            Y desde ese día, caminar contigo se volvió mi lugar seguro.
+          </p>
+        </div>
+      </div>
+
+      <!-- EVENTO 3 -->
+      <div class="relative pl-12 grid md:grid-cols-2 gap-10 items-center fade-up">
+        <span class="absolute -left-2 top-8 w-4 h-4 bg-primary rounded-full"></span>
+
+        <img src="foto-matrimonio.jpg" class="w-full h-72 object-cover rounded-xl shadow-md" />
+
+        <div>
+          <h3 class="text-2xl font-light mb-4">Cuando te pedí matrimonio</h3>
+          <p class="text-gray-600 leading-relaxed">
+            No te pedí matrimonio para cambiar nuestra historia,
+            sino para protegerla.
+            Para elegirte cada día, incluso en los silencios,
+            incluso en los días difíciles.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- VIDEO -->
+  <section id="video" class="bg-white py-28 fade-up">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-3xl font-light mb-6">
+        Un recuerdo que vive en nosotros
+      </h2>
+      <p class="text-gray-600 mb-10 max-w-3xl">
+        Este video no es solo un recuerdo,
+        es la prueba de que el amor se construye en los pequeños momentos.
+      </p>
+
+      <div class="aspect-video rounded-xl overflow-hidden shadow-lg bg-black">
+        <video controls class="w-full h-full object-cover">
+          <source src="tu-video.mp4" type="video/mp4" />
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <!-- CIERRE -->
+  <section class="py-28 bg-primary/20 fade-up">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <p class="text-2xl font-light mb-6">
+        Esta es nuestra última Navidad como novios.
+      </p>
+      <p class="text-lg text-gray-700">
+        La próxima será como esposos.  
+        Y todas las demás, como un “para siempre” que se elige todos los días.
+      </p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-10 text-center text-sm text-gray-500 fade-up">
+    Nuestra historia · Diciembre ✨
+  </footer>
+
+  <!-- SCRIPT ANIMACIONES -->
+  <script>
+    const elements = document.querySelectorAll('.fade-up');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.15 });
+
+    elements.forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
